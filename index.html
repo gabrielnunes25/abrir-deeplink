@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Abrir Deeplink</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div>
+            <h1>Deeplink</h1>
+
+            <input
+                placeholder="Digite o seu deeplink..."
+                id="deeplink-input"
+                oninput="updateLink()"
+            />
+
+            <a id="deeplink-button" target="_blank">Abrir</a>
+        </div>
+        <script>
+            function updateLink() {
+                const input = document.getElementById('deeplink-input');
+
+                const button = document.getElementById('deeplink-button');
+
+                button.setAttribute('href', input.value);
+            }
+        </script>
+    </body>
+</html>
